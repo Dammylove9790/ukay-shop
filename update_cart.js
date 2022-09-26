@@ -5,20 +5,48 @@ products_in_cart.innerHTML = localStorage.length;
 
 
 // ************ ADD ITEMS TO CART ************ //
+const message_box_div = document.getElementById('message_box_div')
+
+const msg = (message, type) => {
+  message_box_div.innerHTML = `
+  <div class="alert alert-${type} alert-dismissible" role="alert">
+  <div>${message}</div>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>`
+}
+
+
 function add_to_cart(add_item){
   let product_name = add_item.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML.trim();
   let product_image = add_item.previousElementSibling.previousElementSibling.alt;
   let product_price = add_item.previousElementSibling.firstElementChild.innerHTML.trim().slice(1);
 
-  // if (localStorage.key.include()) {
+  if (localStorage.length > 0) {
+    product_keys = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      product_keys.push(localStorage.key(i))
+      console.log(localStorage.key(i))
+    }
+
+    console.log(product_keys)
+
+    if (product_keys.includes(product_name)) {
+      msg('Product has already been added to your cart!', 'warning')
+    } else {
+      const product_info = JSON.stringify({"product_name": product_name, "product_image": product_image, "product_price": product_price});
+      localStorage.setItem(product_name, product_info);
+      products_in_cart.innerHTML = localStorage.length;
     
-  // } else {
-    
-  // }  
-  const product_info = JSON.stringify({"product_name": product_name, "product_image": product_image, "product_price": product_price});
-  localStorage.setItem(product_name, product_info);
-  products_in_cart.innerHTML = localStorage.length;
-console.log()
+      msg('Product added successfully!', 'success');
+    }  
+  }else {
+    const product_info = JSON.stringify({"product_name": product_name, "product_image": product_image, "product_price": product_price});
+    localStorage.setItem(product_name, product_info);
+    products_in_cart.innerHTML = localStorage.length;
+  
+    msg('Product added successfully!', 'success')
+  }  
+
 }
 
 
