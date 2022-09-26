@@ -1,0 +1,113 @@
+
+#header {
+    min-height: 30vh;
+    background:  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url(image/eshopbanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+#dictionary1 {
+    font-family: 'Tangerine', serif;
+    color: rgb(212, 211, 211);
+    font-size: 100px;
+    font-weight: bolder;
+    text-shadow: 6px 7px 5px darkred;
+}
+
+#dictionary2 {
+    font-family: 'Tangerine', serif;
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    font-weight: bold;
+    text-shadow: 4px 5px 2px darkorange;
+    transform: rotate(-15deg);
+}
+
+.navbar.navbar-expand-lg .container-fluid > a {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#navbarSupportedContent ul i {
+    color: darkorange;
+}
+
+#navbarSupportedContent .navbar-nav.main li a {
+    padding: 20px 15px;
+}
+
+#navbarSupportedContent .navbar-nav.main li a:hover {
+    background-color: rgb(26, 25, 25);
+    color: darkorange;
+}
+
+#navbarSupportedContent .navbar-nav.main li a.active {
+    background-color: black;
+    color: red;
+}
+
+#navbarSupportedContent .navbar-nav.sub-main li:hover a {
+    color: rgb(0, 89, 255);
+}
+
+#navbarSupportedContent .navbar-nav.main li a.active {
+    color: rgb(55, 0, 255);
+}
+
+#navbarSupportedContent .my_cart a {
+    position: relative;
+}
+
+#navbarSupportedContent .my_cart a h5 {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+#navbarSupportedContent .my_cart:hover, #navbarSupportedContent .my_cart a:hover {
+    color: white !important;
+}
+
+#search_input {
+    border: 5px solid orange;
+    width: 100%;
+    border-radius: 10px;
+    height: 50px;
+    padding: 0 10px;
+}
+
+#search_input:focus {
+    outline: none ;
+    box-shadow: 0 8px 15px 0 orange;
+}
+
+.content_area {
+    min-height: 75vh;
+    border-radius: 20px;
+}
+
+/* .navbar {
+    width: 100%;
+    height: 70px;
+} */
+
+.cart_item_minus, .cart_item_plus {
+    background-color: rgb(0, 146, 0);
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    width: 30px;
+    cursor: pointer;
+}
+
+#cart_item_number {
+    width: 60px;
+}
+
+#footer_section h2, #footer_section h4, #footer_section small {
+    color: darkorange;
+}
