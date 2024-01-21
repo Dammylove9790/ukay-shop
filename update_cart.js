@@ -18,7 +18,11 @@ const msg = (message, type) => {
 
 function add_to_cart(add_item){
   let product_name = add_item.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML.trim();
-  let product_image = add_item.previousElementSibling.previousElementSibling.alt;
+  let product_image_Array = ""
+      product_image_Array = add_item.previousElementSibling.previousElementSibling.src.split("/"),
+      product_image = product_image_Array[product_image_Array.length-1];
+
+
   let product_price = add_item.previousElementSibling.firstElementChild.innerHTML.trim().slice(1);
 
   if (localStorage.length > 0) {

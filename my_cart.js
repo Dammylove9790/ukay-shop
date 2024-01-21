@@ -37,7 +37,7 @@ if (localStorage.length > 0) {
       <tr>
       <td>${j}</td>
       <td>${product_info_value.product_name}</td>
-      <td><img src="${product_info_value.product_image}" alt="${product_info_value.product_image}" width="50px"></td>
+      <td><img src="image/${product_info_value.product_image}" alt="${product_info_value.product_image}" width="50px"></td>
       <td id="product_amount">#${product_info_value.product_price}</td>
       <td class="col-2">
         <div class="row text-center justify-content-center float-left">
